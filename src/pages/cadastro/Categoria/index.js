@@ -9,7 +9,7 @@ function CadastroCategoria() {
   const initialValues = {
     name: '',
     desc: '',
-    color: '#000'
+    color: ''
   }
   
   const [values, setValues] = useState(initialValues);
