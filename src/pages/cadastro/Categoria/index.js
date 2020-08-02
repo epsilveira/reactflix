@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
 import useForm from '../../../hooks/useForm';
+import categoriasRepository from '../../../repositories/categorias';
 
 function CadastroCategoria() {
+  const history = useHistory();
   const [categorias, setCategorias] = useState([]);
 
   const initialValues = {
-    name: '',
+    titulo: '',
+    cor: '#000000',
     desc: '',
-    color: '',
   };
 
   const { values, handleChange, clearForm } = useForm(initialValues);
@@ -35,27 +37,37 @@ function CadastroCategoria() {
   //      id: 1,
   //      name: 'Eduardo Silveira',
   //      desc: 'Pregações de Eduardo Silveira',
-  //      color: '#6bd1ff',
+  //      cor: '#6bd1ff',
   //    },
   //    {
   //      id: 2,
   //      name: 'Top Pregações',
   //      desc: 'Pregações que mudaram a vida, por Teologueiros',
-  //      color: '#00C86F',
+  //      cor: '#00C86F',
   //    },
   //  ]);
   // }, 3 * 1000);
-  }, [
-  ]);
+  }, []);
+
   return (
     <PageDefault>
       <h1>
         Cadastro de Categoria:
-        {values.name}
+        {values.titulo}
       </h1>
 
       <form onSubmit={function handleSubmit(infoEvent) {
         infoEvent.preventDefault();
+
+        categoriasRepository.create({
+          titulo: values.titulo,
+          cor: values.cor,
+          desc: values.desc,
+        })
+          .then(() => {
+            history.push('/categoria');
+          });
+
         setCategorias([
           ...categorias,
           values,
@@ -68,8 +80,8 @@ function CadastroCategoria() {
         <FormField
           label="Nome da Categoria"
           type="text"
-          value={values.name}
-          name="name"
+          value={values.titulo}
+          name="titulo"
           onChange={handleChange}
         />
 
@@ -84,8 +96,8 @@ function CadastroCategoria() {
         <FormField
           label="Cor"
           type="color"
-          value={values.color}
-          name="color"
+          value={values.cor}
+          name="cor"
           onChange={handleChange}
         />
 

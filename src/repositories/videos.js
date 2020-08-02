@@ -16,7 +16,7 @@ function create(videoObject) {
         return answer;
       }
 
-      throw new Error('Não foi possível cadastrar os dados do servidor :( ');
+      throw new Error('Não foi possível cadastrar os dados no servidor :( ');
     });
 }
 

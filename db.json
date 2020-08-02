@@ -5,6 +5,7 @@
       "titulo": "Eduardo Silveira",
       "link": "http://epsilveira.github.io/",
       "cor": "#6BD1FF",
+      "desc": "Pregações de Eduardo Silveira",
       "link_extra": {
         "text": "Pregações de Eduardo Silveira",
         "url": "https://www.youtube.com/channel/UCL4-aWf00M8MABMTi_IZOSg"
@@ -15,6 +16,7 @@
       "titulo": "Top Pregações",
       "link": "https://www.youtube.com/watch?v=b_O57AJnB5E",
       "cor": "#00C86F",
+      "desc": "Pregações que mudaram a vida, por Teologueiros",
       "link_extra": {
         "text": "Pregações que mudaram a vida, por Teologueiros",
         "url": "https://www.youtube.com/watch?v=N5lw809gB94&list=PL-t0HEpXXHISKoCKNdRrAZTLv1xZVPDnQ&index=2&t=0s"
@@ -24,6 +26,7 @@
       "id": 3,
       "titulo": "Data Science e Inteligência Artificial",
       "cor": "#9cd33b",
+      "desc": "Cursos de Data Science na Alura",
       "link_extra": {
         "text": "Cursos de Data Science na Alura",
         "url": "https://www.alura.com.br/cursos-online-mobile"
@@ -32,12 +35,18 @@
     {
       "id": 4,
       "titulo": "Filmes",
-      "cor": "orange"
+      "cor": "orange",
+      "desc": "",
+      "link_extra": {
+        "text": "",
+        "url": ""
+      }
     },
     {
       "id": 5,
       "titulo": "Games",
       "cor": "red",
+      "desc": "Formação de Jogos na Alura",
       "link_extra": {
         "text": "Formação de Jogos na Alura",
         "url": "https://www.alura.com.br/cursos-online-front-end"
