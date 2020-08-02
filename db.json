@@ -1,0 +1,16 @@
+{
+    "categorias": [
+        {
+            "id": 1,
+            "name": "Eduardo Silveira",
+            "desc": "Pregações de Eduardo Silveira",
+            "color": "#6bd1ff"
+        },
+        {
+            "id": 2,
+            "name": "Top Pregações",
+            "desc": "Pregações que mudaram a vida, por Teologueiros",
+            "color": "#00C86F"
+        }
+    ]
+}
